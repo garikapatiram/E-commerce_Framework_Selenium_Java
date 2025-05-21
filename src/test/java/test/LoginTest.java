@@ -5,8 +5,10 @@ import pages.HomePage;
 import pages.LoginPage;
 import utility.ConfigReader;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import static utility.WaitUtils.waitForElementToBeVisible;
 
 /**
  * Test class for login functionality
@@ -26,15 +28,22 @@ public class LoginTest extends BaseTest {
 	@Test(priority = 2, description = "Test login with invalid credentials")
 	public void testInvalidLogin() throws InterruptedException {
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage = loginPage.loginWithInvalidCredentials(ConfigReader.getProperty("ivalidusername"),
+		loginPage = loginPage.loginWithInvalidCredentials(ConfigReader.getProperty("invaliduser"),
 				ConfigReader.getProperty("invalidpassword"));
 		
-		staticWait(1);
+		// Wait for error message to be visible
+		
+		waitForElementToBeVisible(driver, loginPage.getErrorMessageElement());
+
+		
+	//	staticWait(1);
 		// Verify error message is displayed
 		Assert.assertTrue(loginPage.isErrorMessageDisplayed(), "Error message should be displayed");
 
 		test.info("Error message displayed as expected");
 	}
+
+	
 
 	// @Test(description = "Test forgot password functionality")
 	public void testForgotPassword() {

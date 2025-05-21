@@ -103,4 +103,11 @@ public class LoginPage extends BasePage {
     public boolean isErrorMessageDisplayed() {
         return isDisplayed(errorMessage);
     }
+    
+    
+
+	public WebElement getErrorMessageElement() {
+		// TODO Auto-generated method stub
+		return errorMessage;
+	}
 }

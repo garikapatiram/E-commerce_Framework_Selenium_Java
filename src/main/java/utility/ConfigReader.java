@@ -15,7 +15,7 @@ public class ConfigReader {
 
 	public static Properties properties = new Properties();
 	private static final Logger logger = LogManager.getLogger(ConfigReader.class);
-	private static final String CONFIG_PATH = "\\src\\main\\resource\\config.properties";
+	private static final String CONFIG_PATH = "\\src\\main\\resources\\config.properties";
 //	private static final String Path = "C:\\Users\\Dinesh\\eclipse-workspace\\RahulShety\\src\\main\\resource\\config.properties ";
 	private static boolean isInitialized = false;
 
