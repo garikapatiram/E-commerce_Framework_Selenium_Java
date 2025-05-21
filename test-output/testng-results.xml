@@ -2,42 +2,42 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-21T19:04:44 IST" name="Default suite" finished-at="2025-05-21T19:04:51 IST" duration-ms="7721">
+  <suite started-at="2025-05-21T23:11:50 IST" name="Default suite" finished-at="2025-05-21T23:12:09 IST" duration-ms="19081">
     <groups>
     </groups>
-    <test started-at="2025-05-21T19:04:44 IST" name="Default test" finished-at="2025-05-21T19:04:51 IST" duration-ms="7721">
+    <test started-at="2025-05-21T23:11:50 IST" name="Default test" finished-at="2025-05-21T23:12:09 IST" duration-ms="19081">
       <class name="test.LoginTest">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:test.LoginTest@3016fd5e]" started-at="2025-05-21T19:04:44 IST" name="beforeSuite" finished-at="2025-05-21T19:04:44 IST" duration-ms="170" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:test.LoginTest@3016fd5e]" started-at="2025-05-21T23:11:49 IST" name="beforeSuite" finished-at="2025-05-21T23:11:50 IST" duration-ms="227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:test.LoginTest@3016fd5e]" started-at="2025-05-21T19:04:44 IST" name="setup" finished-at="2025-05-21T19:04:50 IST" duration-ms="6156" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:test.LoginTest@3016fd5e]" started-at="2025-05-21T23:11:50 IST" name="setup" finished-at="2025-05-21T23:12:08 IST" duration-ms="18076" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.LoginTest.testInvalidLogin() throws java.lang.InterruptedException]]>
+                <![CDATA[public void test.LoginTest.testValidLogin()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testInvalidLogin()[pri:2, instance:test.LoginTest@3016fd5e]" started-at="2025-05-21T19:04:50 IST" name="testInvalidLogin" description="Test login with invalid credentials" finished-at="2025-05-21T19:04:51 IST" duration-ms="563" status="PASS">
+        <test-method signature="testValidLogin()[pri:1, instance:test.LoginTest@3016fd5e]" started-at="2025-05-21T23:12:08 IST" name="testValidLogin" description="Test valid login with correct credentials" finished-at="2025-05-21T23:12:08 IST" duration-ms="750" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testInvalidLogin -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:test.LoginTest@3016fd5e]" started-at="2025-05-21T19:04:51 IST" name="tearDown" finished-at="2025-05-21T19:04:51 IST" duration-ms="973" status="PASS">
+        </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:test.LoginTest@3016fd5e]" started-at="2025-05-21T23:12:08 IST" name="tearDown" finished-at="2025-05-21T23:12:09 IST" duration-ms="218" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testInvalidLogin status=SUCCESS method=LoginTest.testInvalidLogin()[pri:2, instance:test.LoginTest@3016fd5e] output={null}]]]>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=LoginTest.testValidLogin()[pri:1, instance:test.LoginTest@3016fd5e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:test.LoginTest@3016fd5e]" started-at="2025-05-21T19:04:52 IST" name="afterSuite" finished-at="2025-05-21T19:04:52 IST" duration-ms="288" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:test.LoginTest@3016fd5e]" started-at="2025-05-21T23:12:09 IST" name="afterSuite" finished-at="2025-05-21T23:12:09 IST" duration-ms="282" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

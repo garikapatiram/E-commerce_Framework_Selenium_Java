@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\ramba\AppData\Local\Temp\testng-eclipse-1304211311\testng-customsuite.xml</span>
+                    <span>C:\Users\ramba\AppData\Local\Temp\testng-eclipse-1455793485\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="test.LoginTest" class="method navigator-link" hash-for-method="testInvalidLogin">testInvalidLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="test.LoginTest" class="method navigator-link" hash-for-method="testValidLogin">testValidLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -126,11 +126,11 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testInvalidLogin">
-                  </a> <!-- testInvalidLogin -->
-                  <span class="method-name">testInvalidLogin</span>
+                  <a name="testValidLogin">
+                  </a> <!-- testValidLogin -->
+                  <span class="method-name">testValidLogin</span>
                   <em>
-(Test login with invalid credentials)                  </em>
+(Test valid login with correct credentials)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -138,7 +138,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ramba\AppData\Local\Temp\testng-eclipse-1304211311\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ramba\AppData\Local\Temp\testng-eclipse-1455793485\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -149,7 +149,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;test.LoginTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;testInvalidLogin&quot;/&gt;
+          &lt;include name=&quot;testValidLogin&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- test.LoginTest --&gt;
     &lt;/classes&gt;
@@ -193,14 +193,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testInvalidLogin')
+data.setCell(0, 1, 'testValidLogin')
 data.setCell(0, 2, 'test.LoginTest')
-data.setCell(0, 3, 563);
+data.setCell(0, 3, 750);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 563 ms</span>
+              <span class="suite-total-time">Total running time: 750 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -221,7 +221,7 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">test.LoginTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">testValidLogin</span>
+                <span class="ignored-method-name">testInvalidLogin</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -239,20 +239,20 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">setup(public void test.LoginTest.testInvalidLogin() throws java.lang.InterruptedException)</span>
-                <span class="method-start">194 ms</span>
+                <span class="method-name">setup(public void test.LoginTest.testValidLogin())</span>
+                <span class="method-start">257 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testInvalidLogin</span>
-                <span class="method-start">6350 ms</span>
+                <span class="method-name">testValidLogin</span>
+                <span class="method-start">18335 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testInvalidLogin status=SUCCESS method=LoginTest.testInvalidLogin()[pri:2, instance...)</span>
-                <span class="method-start">6917 ms</span>
+                <span class="method-name">tearDown([TestResult name=testValidLogin status=SUCCESS method=LoginTest.testValidLogin()[pri:1, instance:tes...)</span>
+                <span class="method-start">19088 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">7910 ms</span>
+                <span class="method-start">19333 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
