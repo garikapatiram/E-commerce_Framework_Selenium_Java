@@ -31,12 +31,13 @@ public class LoginTest extends BaseTest {
 		loginPage = loginPage.loginWithInvalidCredentials(ConfigReader.getProperty("invaliduser"),
 				ConfigReader.getProperty("invalidpassword"));
 		
-		// Wait for error message to be visible
+		// Wait for error message to be visible 
 		
 		waitForElementToBeVisible(driver, loginPage.getErrorMessageElement());
 
 		
 	//	staticWait(1);
+		
 		// Verify error message is displayed
 		Assert.assertTrue(loginPage.isErrorMessageDisplayed(), "Error message should be displayed");
 
