@@ -1,51 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-22T11:21:26 IST" name="Default suite" finished-at="2025-05-22T11:21:45 IST" duration-ms="19018">
+  <suite started-at="2025-05-22T12:51:07 IST" name="Default suite" finished-at="2025-05-22T12:51:18 IST" duration-ms="11138">
     <groups>
     </groups>
-    <test started-at="2025-05-22T11:21:26 IST" name="Default test" finished-at="2025-05-22T11:21:45 IST" duration-ms="19018">
-      <class name="test.CheckoutTest">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:test.CheckoutTest@3bcbb589]" started-at="2025-05-22T11:21:25 IST" name="beforeSuite" finished-at="2025-05-22T11:21:26 IST" duration-ms="342" status="PASS">
+    <test started-at="2025-05-22T12:51:07 IST" name="Default test" finished-at="2025-05-22T12:51:18 IST" duration-ms="11138">
+      <class name="test.LoginTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:test.LoginTest@3016fd5e]" started-at="2025-05-22T12:51:07 IST" name="beforeSuite" finished-at="2025-05-22T12:51:07 IST" duration-ms="223" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:test.CheckoutTest@3bcbb589]" started-at="2025-05-22T11:21:26 IST" name="setup" finished-at="2025-05-22T11:21:36 IST" duration-ms="10468" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:test.LoginTest@3016fd5e]" started-at="2025-05-22T12:51:07 IST" name="setup" finished-at="2025-05-22T12:51:17 IST" duration-ms="9910" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.CheckoutTest.testCheckoutProcess()]]>
+                <![CDATA[public void test.LoginTest.testValidLogin()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="loginAndAddProductToCart()[pri:0, instance:test.CheckoutTest@3bcbb589]" started-at="2025-05-22T11:21:36 IST" name="loginAndAddProductToCart" finished-at="2025-05-22T11:21:42 IST" duration-ms="6091" status="PASS">
+        <test-method signature="testValidLogin()[pri:1, instance:test.LoginTest@3016fd5e]" started-at="2025-05-22T12:51:17 IST" name="testValidLogin" description="Test valid login with correct credentials" finished-at="2025-05-22T12:51:18 IST" duration-ms="1008" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginAndAddProductToCart -->
-        <test-method signature="testCheckoutProcess()[pri:0, instance:test.CheckoutTest@3bcbb589]" started-at="2025-05-22T11:21:42 IST" name="testCheckoutProcess" description="Test complete checkout process" finished-at="2025-05-22T11:21:44 IST" duration-ms="2228" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCheckoutProcess -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:test.CheckoutTest@3bcbb589]" started-at="2025-05-22T11:21:44 IST" name="tearDown" finished-at="2025-05-22T11:21:45 IST" duration-ms="181" status="PASS">
+        </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:test.LoginTest@3016fd5e]" started-at="2025-05-22T12:51:18 IST" name="tearDown" finished-at="2025-05-22T12:51:18 IST" duration-ms="171" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testCheckoutProcess status=SUCCESS method=CheckoutTest.testCheckoutProcess()[pri:0, instance:test.CheckoutTest@3bcbb589] output={null}]]]>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=LoginTest.testValidLogin()[pri:1, instance:test.LoginTest@3016fd5e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:test.CheckoutTest@3bcbb589]" started-at="2025-05-22T11:21:45 IST" name="afterSuite" finished-at="2025-05-22T11:21:45 IST" duration-ms="402" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:test.LoginTest@3016fd5e]" started-at="2025-05-22T12:51:18 IST" name="afterSuite" finished-at="2025-05-22T12:51:19 IST" duration-ms="467" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- test.CheckoutTest -->
+      </class> <!-- test.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
