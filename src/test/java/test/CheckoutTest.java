@@ -4,9 +4,13 @@ import base.BaseTest;
 import pages.*;
 import utility.ConfigReader;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import static utility.WaitUtils.waitForElementsToBeVisible;
+import static utility.WaitUtils.waitForElementToBeVisible;
 
 import java.util.List;
 
@@ -25,21 +29,29 @@ public class CheckoutTest extends BaseTest {
         
         // Verify login was successful
         Assert.assertTrue(homePage.isUserLoggedIn(), "User should be logged in before checkout tests");
-        staticWait(2);
+        test.info("User logged in successfully");
+        
+        // Wait for products to load
+        waitForElementsToBeVisible(driver, homePage.getProductCards());
+        
+       // staticWait(2);
         // Get all products
         List<String> productTitles = homePage.getProductTitles();
         
         if (!productTitles.isEmpty()) {
             // Add product to cart
             homePage.addProductToCart(productTitles.get(0));
-            staticWait(2);
+            
+//            staticWait(2);
             test.info("Added product to cart: " + productTitles.get(0));
         } else {
             Assert.fail("No products found to add to cart");
         }
     }
     
-    @Test(description = "Test complete checkout process")
+   
+
+	@Test(description = "Test complete checkout process")
     public void testCheckoutProcess() {
         // Go to cart
         CartPage cartPage = homePage.goToCart();

@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.function.Function;
 
 /**
@@ -19,6 +20,7 @@ public class WaitUtils {
     
     private WaitUtils() {
         // Private constructor to prevent instantiation
+    	
     }
     
     /**
@@ -137,5 +139,16 @@ public class WaitUtils {
             logger.error("Timeout waiting for Ajax calls to complete: {}", e.getMessage());
             throw e;
         }
+    }
+    public static WebElement  waitForElementsToBeVisible(WebDriver driver, List<WebElement>elments) {
+    	  try {
+    		  for (WebElement element : elments) {
+    			return getWait(driver).until(ExpectedConditions.visibilityOf(element));
+    		  }
+    		  
+    	  }catch (TimeoutException e) {
+    		  logger.error("Timeout waiting for elements to be visible: {}", e.getMessage());
+    	  }
+		return null;
     }
 }

@@ -2,6 +2,7 @@ package utility;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -23,6 +24,8 @@ public class WebDriverFactory {
 	    
 	    private WebDriverFactory() {
 	        // Private constructor to prevent instantiation
+	    	
+	    	
 	    }
 	    
 	    /**
@@ -33,6 +36,7 @@ public class WebDriverFactory {
 	    public static WebDriver getDriver(String browserName) {
 	        WebDriver driver;
 	        boolean isHeadless = Boolean.parseBoolean(ConfigReader.getProperty("headless", "false"));
+	       
 	        
 	        switch (browserName.toLowerCase()) {
 	            case "chrome" -> {
@@ -47,6 +51,7 @@ public class WebDriverFactory {
 	                options.addArguments("--no-sandbox");
 	                options.addArguments("--disable-dev-shm-usage");
 	                driver = new ChromeDriver(options);
+	                driver.manage().window().setSize(new Dimension(1440, 900));
 	            }
 	            case "firefox" -> {
 	                logger.info("Initializing Firefox driver");

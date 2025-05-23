@@ -56,10 +56,11 @@ public class BaseTest {
         test = extent.createTest(method.getName(), method.getAnnotation(Test.class).description());
         
         // Initialize WebDriver
-        driver = WebDriverFactory.getDriver(ConfigReader.getProperty("browser"));
+       // driver = WebDriverFactory.getDriver(ConfigReader.getProperty("browser"));
+        driver = WebDriverFactory.getDriver(System.getProperty("browser")!=null ? System.getProperty("browser"): ConfigReader.getProperty("browser"));
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(
-                Integer.parseInt(ConfigReader.getProperty("implicit.wait"))));
+                 Integer.parseInt(ConfigReader.getProperty("implicit.wait"))));
         
         // Open application URL
         driver.get(ConfigReader.getProperty("base.url"));

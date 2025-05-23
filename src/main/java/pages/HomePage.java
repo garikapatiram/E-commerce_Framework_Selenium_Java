@@ -165,4 +165,20 @@ public class HomePage extends BasePage {
     public boolean isUserLoggedIn() {
         return isDisplayed(welcomeMessage);
     }
+
+	public List<WebElement> getProductCards() {
+		logger.info("Getting product cards");
+		return productCards;
+	}
+    
+	public WebElement getViewButton() {
+		logger.info("Getting view button");
+		return ViewButton;
+	}
+	public WebElement getCartButton() {
+		logger.info("Getting cart button");
+		return cartButton;
+	}
+
+		
 }
