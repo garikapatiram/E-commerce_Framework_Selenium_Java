@@ -1,5 +1,6 @@
 package utility;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -26,10 +27,17 @@ public class ExtentManager {
 	     * @return ExtentReports instance
 	     */
 	    public static ExtentReports createInstance() {
-	        String reportPath = ConfigReader.getProperty("report.path", 
-	                "reports/ExtentReport_" + getFormattedDateTime() + ".html");
+	    	
+	    	 String reportDirectory = "reports/ExtentReport_" + getFormattedDateTime();
+	         String reportFilePath = reportDirectory + "/ExtentReport.html";
+
+	         // Create directory if it doesn't exist
+	         new File(reportDirectory).mkdirs();
+	    	
+	 //       String reportPath = ConfigReader.getProperty("report.path", 
+	   //             "reports/ExtentReport_" + getFormattedDateTime() + ".html");
 	        
-	        ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
+	        ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportFilePath);
 	        sparkReporter.config().setDocumentTitle(ConfigReader.getProperty("report.title", "Automation Test Report"));
 	        sparkReporter.config().setReportName(ConfigReader.getProperty("report.name", "Test Execution Report"));
 	        sparkReporter.config().setTheme(Theme.STANDARD);
@@ -46,7 +54,7 @@ public class ExtentManager {
 	        extent.setSystemInfo("Environment", "QA");
 	        extent.setSystemInfo("Application URL", ConfigReader.getProperty("base.url"));
 	        
-	        logger.info("Extent Report configured at: {}", reportPath);
+	        logger.info("Extent Report configured at: {}", reportFilePath);
 	        return extent;
 	    }
 	    
